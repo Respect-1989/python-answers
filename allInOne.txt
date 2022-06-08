@@ -1,0 +1,174 @@
+with open('pi.txt') as file:
+    pi=file.read()
+print("1:   ",pi)
+
+pi=pi.rstrip()# qatorni oxxirida bosh joykarni olib tashlaydi
+pi=pi.replace("
+",'')#
+ topib urnini " " bilan almashtiradi
+pi=float(pi) #float kurinishiga olib keladi
+print("2:   ",pi)
+filename='data/talabalar.txt'
+# with open(filename) as file:
+#     for line in  file:
+#         print(line)
+#         Dilshod Atadjanov
+#         output
+# Dilshod Atadjanov
+# Anvar Olimovich
+# Sodiq Aliev
+# Valijon Oqilov
+
+with open(filename) as file:
+    talabalar=file.readlines()
+    #['Dilshod Atadjanov
+', 'Anvar Olimovich
+', 'Sodiq Aliev
+', 'Valijon Oqilov']
+print(talabalar)    
+
+talabalar=[talaba.rstrip() for talaba in talabalar] 
+#['Dilshod Atadjanov', 'Anvar Olimovich', 'Sodiq Aliev', 'Valijon Oqilov']
+talabalar
+filename='new_file.txt'
+ism='Dilshod'
+byear=1989
+with open(filename,'w') as file:
+    file.write(ism)
+    file.write(str(byear))  #['Dilshod1989']
+
+openfile="new_file.txt"
+with open(openfile) as openfile:
+    openfile=openfile.readlines()
+print(openfile)
+filename='new_file.txt'
+ism='Dilshod'
+byear=1989
+with open(filename,'w') as file:
+    file.write(ism+'
+')
+    file.write(str(byear)+'
+') #['Dilshod
+', '1989
+'] 
+
+openfile="new_file.txt"
+with open(openfile) as openfile:
+    openfile=openfile.readlines()
+print(openfile) 
+#filename='new_file.txt'
+ism='Anvar'
+byear=1980
+with open(filename,'a') as file:
+    file.write(ism+'
+')
+    file.write(str(byear)+'
+')
+    
+openfile='new_file.txt'
+with open(openfile) as file:
+    file=file.readlines()
+print(file)
+import pickle
+
+talaba1={'ism':'Dilshod','familya':'Atadjanov','tyil':1989,'kurs':2}
+talaba2={'ism':'Anvar','familya':'Atadjanov','tyil':1980,'kurs':4}
+
+# here we save into file
+with open('file','wb') as file:#file.txt qilinmadi chunki buni faqat pickle oqiy oladi xolos
+    pickle.dump(talaba1,file)
+    pickle.dump(talaba2 ,file)
+
+# here we open this file
+with open('file','rb') as file:
+    talaba1=pickle.load(file)
+    talaba2=pickle.load(file)
+print(talaba1)
+print(talaba2)
+with open('pi.txt') as file:
+    pi=file.read()
+print("1:   ",pi)
+
+pi=pi.rstrip()# qatorni oxxirida bosh joykarni olib tashlaydi
+pi=pi.replace("
+",'')#
+ topib urnini " " bilan almashtiradi
+pi=float(pi) #float kurinishiga olib keladi
+print("2:   ",pi)
+filename='data/talabalar.txt'
+# with open(filename) as file:
+#     for line in  file:
+#         print(line)
+#         Dilshod Atadjanov
+#         output
+# Dilshod Atadjanov
+# Anvar Olimovich
+# Sodiq Aliev
+# Valijon Oqilov
+
+with open(filename) as file:
+    talabalar=file.readlines()
+    #['Dilshod Atadjanov
+', 'Anvar Olimovich
+', 'Sodiq Aliev
+', 'Valijon Oqilov']
+print(talabalar)    
+
+talabalar=[talaba.rstrip() for talaba in talabalar] 
+#['Dilshod Atadjanov', 'Anvar Olimovich', 'Sodiq Aliev', 'Valijon Oqilov']
+talabalar
+filename='new_file.txt'
+ism='Dilshod'
+byear=1989
+with open(filename,'w') as file:
+    file.write(ism)
+    file.write(str(byear))  #['Dilshod1989']
+
+openfile="new_file.txt"
+with open(openfile) as openfile:
+    openfile=openfile.readlines()
+print(openfile)
+filename='new_file.txt'
+ism='Dilshod'
+byear=1989
+with open(filename,'w') as file:
+    file.write(ism+'
+')
+    file.write(str(byear)+'
+') #['Dilshod
+', '1989
+'] 
+
+openfile="new_file.txt"
+with open(openfile) as openfile:
+    openfile=openfile.readlines()
+print(openfile) 
+#filename='new_file.txt'
+ism='Anvar'
+byear=1980
+with open(filename,'a') as file:
+    file.write(ism+'
+')
+    file.write(str(byear)+'
+')
+    
+openfile='new_file.txt'
+with open(openfile) as file:
+    file=file.readlines()
+print(file)
+import pickle
+
+talaba1={'ism':'Dilshod','familya':'Atadjanov','tyil':1989,'kurs':2}
+talaba2={'ism':'Anvar','familya':'Atadjanov','tyil':1980,'kurs':4}
+
+# here we save into file
+with open('file','wb') as file:#file.txt qilinmadi chunki buni faqat pickle oqiy oladi xolos
+    pickle.dump(talaba1,file)
+    pickle.dump(talaba2 ,file)
+
+# here we open this file
+with open('file','rb') as file:
+    talaba1=pickle.load(file)
+    talaba2=pickle.load(file)
+print(talaba1)
+print(talaba2)
